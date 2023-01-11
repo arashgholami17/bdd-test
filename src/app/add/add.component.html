@@ -1,0 +1,10 @@
+    <input id="firstName" type="text" #firstName [value]="firstName.value">
+    <label for="firstName">firstName</label><br>
+    <input id="lastName" type="text" #lastName>
+    <label for="lastName">lastName</label><br>
+    <input id="email" type="email" #email>
+    <label for="email">email</label><br>
+    <input id="phone" type="number" #number>
+    <label for="phone">phone</label><br>
+
+    <button id="Save"  (click)="onSave(firstName,lastName,email,number)">Save</button>

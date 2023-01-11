@@ -1,0 +1,56 @@
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100wv !important;
+  height: 100vh;
+}
+
+.modalDialog:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popUp {
+  width: 350px;
+  min-height: 150px !important;
+  height: auto;
+  position: absolute;
+  border-radius: 10px;
+  background: linear-gradient(#fff, rgb(223, 220, 220));
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+table {
+  text-decoration: none;
+  border-collapse: collapse;
+  border: solid 5px black;
+  text-align: center;
+}
+
+table > thead > tr > td {
+  padding: 11px;
+  font-weight: bold;
+  border-right: solid black 1px;
+}
+
+table > tbody > tr {
+  margin-top: 30px;
+}
+
+table > tbody > tr > td {
+  border: solid 1px black;
+  padding: 5px;
+}/*# sourceMappingURL=view.component.css.map */

@@ -1,0 +1,4 @@
+<div *ngFor="let d of tableHead;let i=index">
+    <label for="d">{{d}}: </label><input [id]="d" [value]="this.dataRecA[i]">
+</div>
+<button id="onSave" (click)="onSave()">on Save</button>

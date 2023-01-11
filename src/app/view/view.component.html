@@ -1,0 +1,31 @@
+<div class="modalDialog" *ngIf="showPopUp">
+    <div class="popUp" cdkDrag>
+        <section class="toolsBar " style="top: -15px" cdkDragHandle>
+            <button class="close" (click)="closePopUp()"><i class="fa-solid fa-xmark"></i>X</button>
+        </section>
+        <p class="popUpPara" dir="ltr"></p>
+        <app-add (sendData)="getData($event)"></app-add>
+    </div>
+  </div>
+<p>view!</p>
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td *ngFor="let data of this.tableHead">{{data}}</td>
+        </tr>
+    </thead>
+    <tbody id="totalData">
+        <tr  id="trtableData{{i+1}}" *ngFor="let data of tableData() let i=index">
+            <td>{{i+1}}</td>
+            <td *ngFor="let d of data">{{d}}</td>
+            <td>
+                <button id="deleteBut{{i+1}}" (click)="onDelete(i)">Delete</button>
+                <button id="editBut{{i+1}}" (click)="onEdit(i)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+Total Number of row: <p id="rowNumber">{{this.tableRows.length-1}}</p>
+<br>
+<button id="addNew" (click)="onshowPopUp()">Add New Row</button>
